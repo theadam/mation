@@ -1,0 +1,12 @@
+{
+  "extends": "eslint-config-airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+    "react/no-multi-comp": 0,
+    "new-cap": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
