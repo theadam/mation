@@ -68,7 +68,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-	var _raf = __webpack_require__(10);
+	var _raf = __webpack_require__(9);
 
 	var _raf2 = _interopRequireDefault(_raf);
 
@@ -84,9 +84,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _state2 = _interopRequireDefault(_state);
 
-	var _signal = __webpack_require__(8);
+	var _simpleSignal = __webpack_require__(11);
 
-	var _signal2 = _interopRequireDefault(_signal);
+	var _simpleSignal2 = _interopRequireDefault(_simpleSignal);
 
 	var _spring = __webpack_require__(1);
 
@@ -99,9 +99,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    _classCallCheck(this, Animation);
 
-	    this.signal = (0, _signal2['default'])();
-	    this.moveSignal = (0, _signal2['default'])();
-	    this.settleSignal = (0, _signal2['default'])();
+	    this.signal = (0, _simpleSignal2['default'])();
+	    this.moveSignal = (0, _simpleSignal2['default'])();
+	    this.settleSignal = (0, _simpleSignal2['default'])();
 
 	    this.state = (0, _state2['default'])(val);
 	    this.config = config;
@@ -282,7 +282,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	}).call(this);
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ },
 /* 4 */
@@ -370,7 +370,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-	var _reactMotionLibStepper = __webpack_require__(11);
+	var _reactMotionLibStepper = __webpack_require__(10);
 
 	var _reactMotionLibStepper2 = _interopRequireDefault(_reactMotionLibStepper);
 
@@ -487,39 +487,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 8 */
 /***/ function(module, exports) {
 
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports["default"] = Signal;
-
-	function Signal() {
-	  var subscribers = [];
-	  return {
-	    on: function on(fn) {
-	      subscribers.push(fn);
-	    },
-	    off: function off(fn) {
-	      var index = subscribers.indexOf(fn);
-	      if (index > -1) {
-	        subscribers.splice(index, 1);
-	      }
-	    },
-	    emit: function emit(val) {
-	      for (var i = 0; i < subscribers.length; i++) {
-	        subscribers[i](val);
-	      }
-	    }
-	  };
-	}
-
-	module.exports = exports["default"];
-
-/***/ },
-/* 9 */
-/***/ function(module, exports) {
-
 	// shim for using process in browser
 
 	var process = module.exports = {};
@@ -614,7 +581,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var now = __webpack_require__(3)
@@ -688,7 +655,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports) {
 
 	
@@ -734,6 +701,37 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = exports["default"];
 	// array reference around.
+
+/***/ },
+/* 11 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	exports.__esModule = true;
+	exports["default"] = Signal;
+
+	function Signal() {
+	  var subscribers = [];
+	  return {
+	    on: function on(fn) {
+	      subscribers.push(fn);
+	    },
+	    off: function off(fn) {
+	      var index = subscribers.indexOf(fn);
+	      if (index > -1) {
+	        subscribers.splice(index, 1);
+	      }
+	    },
+	    emit: function emit(val) {
+	      for (var i = 0; i < subscribers.length; i++) {
+	        subscribers[i](val);
+	      }
+	    }
+	  };
+	}
+
+	module.exports = exports["default"];
 
 /***/ }
 /******/ ])
