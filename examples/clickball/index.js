@@ -10,9 +10,11 @@ const reset = () => {
   ballMation.moveTo(100);
 };
 
+let id;
 container.onclick = () => {
+  if (id) clearTimeout(id);
   ballMation.moveTo(500);
-  setTimeout(reset, 200);
+  id = setTimeout(reset, 200);
 };
 
 ballMation.on(v => container.style.height = `${v}px`);

@@ -3,7 +3,7 @@ import now from 'performance-now';
 import presets from 'react-motion/lib/presets';
 
 import State from './state';
-import Signal from './signal';
+import Signal from 'simple-signal';
 import { spring } from './spring';
 
 export { presets, spring };
