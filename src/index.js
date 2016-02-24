@@ -71,3 +71,5 @@ class Animation {
 export default function Mation(val, config) {
   return new Animation(val, config);
 }
+
+export { Mation };
