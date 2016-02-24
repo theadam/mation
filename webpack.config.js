@@ -2,13 +2,6 @@
 
 var webpack = require('webpack');
 
-var flydExternal = {
-  root: 'flyd',
-  commonjs2: 'flyd',
-  commonjs: 'flyd',
-  amd: 'flyd'
-};
-
 var plugins = [
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
@@ -34,11 +27,10 @@ module.exports = {
     ]
   },
   output: {
-    library: 'flydSpring',
+    library: 'mation',
     libraryTarget: 'umd'
   },
   externals: {
-    flyd: flydExternal
   },
   plugins: plugins,
   resolve: {
