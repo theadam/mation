@@ -44,6 +44,7 @@ class Animation {
   }
 
   on(listener) {
+    listener(this.state.x);
     this.signal.on(listener);
   }
 
