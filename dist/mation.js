@@ -139,6 +139,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'on',
 	    value: function on(listener) {
+	      listner(this.state.x);
 	      this.signal.on(listener);
 	    }
 	  }, {
