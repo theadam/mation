@@ -4,6 +4,8 @@ Mation is a simple library to provide simple smooth animations.  Animations can 
 
 [Demo using mation with react-sticky](https://theadam.github.com/mation-react-sticky-example)
 
+[Demo using mation / react-mation with react-inform](http://theadam.github.io/react-inform/examples/mation-example)
+
 ## Installation
 
 `npm install --save mation`
