@@ -2,6 +2,10 @@
 
 Mation is a simple library to provide simple smooth animations.  Animations can be interrupted or redirected, and still look natural.
 
+For animations specifically in React components, take a look at [react-mation](https://github.com/theadam/react-mation).
+
+## Demos
+
 [Demo using mation with react-sticky](https://theadam.github.com/mation-react-sticky-example)
 
 [Demo using mation / react-mation with react-inform](http://theadam.github.io/react-inform/examples/mation-example)
